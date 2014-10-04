@@ -11,14 +11,14 @@ CFLAGS    = -Wall -Werror
 INCLUDE   = -I$(IDIR)
 
 # Target name
-TARGET=test
+TARGET=main
 
 # Enter .h files in DEPS
-_DEPS = test.h
+_DEPS = 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 # Enter .o files here
-_OBJ = main.o test.o
+_OBJ = main.o 
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
