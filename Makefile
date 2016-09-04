@@ -7,7 +7,7 @@ LDIR      = lib
 
 # Compiler config
 CC        = g++
-CFLAGS    = -Wall -Werror
+CFLAGS    = -Wall -Werror -std=c++11
 INCLUDE   = -I$(IDIR)
 
 # Target name
