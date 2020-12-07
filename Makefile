@@ -21,6 +21,10 @@ DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 _OBJ = main.o 
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
+all: $(BINDIR)/$(TARGET)
+
+debug: CFLAGS += -g
+debug: $(BINDIR)/$(TARGET)
 
 $(ODIR)/%.o: $(SRCDIR)/%.cpp $(DEPS)
 		$(CC) -c -o $@ $< $(CFLAGS) $(INCLUDE)
